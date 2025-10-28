@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double-view Calendar</title>
+    <link rel="stylesheet" href="doubleview-calendar-38-5843.css">
+</head>
+<body>
+    <div class="screen-container" id="doubleview-calendar">
+        <!-- Main Double-view Container -->
+        <div class="double-view">
+            <!-- Left Sidebar with Date Range Presets -->
+            <div class="sidebar">
+                <div class="date-presets">
+                    <button class="preset-btn" data-preset="today">Today</button>
+                    <button class="preset-btn active" data-preset="last-7">Last 7 days</button>
+                    <button class="preset-btn" data-preset="last-30">Last 30 days</button>
+                    <button class="preset-btn" data-preset="last-90">Last 90 days</button>
+                    <button class="preset-btn" data-preset="2021">2021</button>
+                    <button class="preset-btn" data-preset="2020">2020</button>
+                    <button class="preset-btn" data-preset="2019">2019</button>
+                </div>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="divider vertical"></div>
+
+            <!-- First Calendar (April 2021) -->
+            <div class="calendar">
+                <div class="calendar-components">
+                    <!-- Header with Navigation -->
+                    <div class="calendar-header">
+                        <button class="nav-btn prev" aria-label="Previous month">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="month-year">
+                            <div class="month-selector">
+                                <span>April</span>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                    <path d="M0 2L4 6L8 2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="year-selector">
+                                <span>2021</span>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                    <path d="M0 2L4 6L8 2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="nav-spacer"></div>
+                    </div>
+
+                    <!-- Days of Week -->
+                    <div class="day-of-week">
+                        <div class="dow">Mo</div>
+                        <div class="dow">Tu</div>
+                        <div class="dow">We</div>
+                        <div class="dow">Th</div>
+                        <div class="dow">Fr</div>
+                        <div class="dow">Sa</div>
+                        <div class="dow">Su</div>
+                    </div>
+
+                    <!-- Calendar Weeks -->
+                    <div class="weeks">
+                        <!-- Week 1 -->
+                        <div class="week">
+                            <div class="day disabled">29</div>
+                            <div class="day disabled">30</div>
+                            <div class="day disabled">31</div>
+                            <div class="day">1</div>
+                            <div class="day selected start">2</div>
+                            <div class="day selected in-range">3</div>
+                            <div class="day selected in-range">4</div>
+                        </div>
+                        <!-- Week 2 -->
+                        <div class="week">
+                            <div class="day selected in-range">5</div>
+                            <div class="day selected in-range">6</div>
+                            <div class="day selected in-range">7</div>
+                            <div class="day selected in-range">8</div>
+                            <div class="day selected end">9</div>
+                            <div class="day">10</div>
+                            <div class="day">11</div>
+                        </div>
+                        <!-- Week 3 -->
+                        <div class="week">
+                            <div class="day">12</div>
+                            <div class="day">13</div>
+                            <div class="day">14</div>
+                            <div class="day">15</div>
+                            <div class="day">16</div>
+                            <div class="day">17</div>
+                            <div class="day">18</div>
+                        </div>
+                        <!-- Week 4 -->
+                        <div class="week">
+                            <div class="day">19</div>
+                            <div class="day">20</div>
+                            <div class="day">21</div>
+                            <div class="day">22</div>
+                            <div class="day">23</div>
+                            <div class="day">24</div>
+                            <div class="day">25</div>
+                        </div>
+                        <!-- Week 5 -->
+                        <div class="week">
+                            <div class="day">26</div>
+                            <div class="day">27</div>
+                            <div class="day">28</div>
+                            <div class="day">29</div>
+                            <div class="day">30</div>
+                            <div class="day disabled">1</div>
+                            <div class="day disabled">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="divider vertical"></div>
+
+            <!-- Second Calendar (May 2021) -->
+            <div class="calendar">
+                <div class="calendar-components">
+                    <!-- Header with Navigation -->
+                    <div class="calendar-header">
+                        <div class="nav-spacer"></div>
+                        <div class="month-year">
+                            <div class="month-selector">
+                                <span>May</span>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                    <path d="M0 2L4 6L8 2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="year-selector">
+                                <span>2021</span>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                    <path d="M0 2L4 6L8 2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <button class="nav-btn next" aria-label="Next month">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Days of Week -->
+                    <div class="day-of-week">
+                        <div class="dow">Mo</div>
+                        <div class="dow">Tu</div>
+                        <div class="dow">We</div>
+                        <div class="dow">Th</div>
+                        <div class="dow">Fr</div>
+                        <div class="dow">Sa</div>
+                        <div class="dow">Su</div>
+                    </div>
+
+                    <!-- Calendar Weeks -->
+                    <div class="weeks">
+                        <!-- Week 1 -->
+                        <div class="week">
+                            <div class="day disabled">29</div>
+                            <div class="day disabled">30</div>
+                            <div class="day disabled">31</div>
+                            <div class="day disabled">1</div>
+                            <div class="day disabled">2</div>
+                            <div class="day">1</div>
+                            <div class="day">2</div>
+                        </div>
+                        <!-- Week 2 -->
+                        <div class="week">
+                            <div class="day">3</div>
+                            <div class="day">4</div>
+                            <div class="day">5</div>
+                            <div class="day">6</div>
+                            <div class="day">7</div>
+                            <div class="day">8</div>
+                            <div class="day">9</div>
+                        </div>
+                        <!-- Week 3 -->
+                        <div class="week">
+                            <div class="day">10</div>
+                            <div class="day">11</div>
+                            <div class="day">12</div>
+                            <div class="day">13</div>
+                            <div class="day">14</div>
+                            <div class="day">15</div>
+                            <div class="day">16</div>
+                        </div>
+                        <!-- Week 4 -->
+                        <div class="week">
+                            <div class="day">17</div>
+                            <div class="day">18</div>
+                            <div class="day">19</div>
+                            <div class="day">20</div>
+                            <div class="day">21</div>
+                            <div class="day">22</div>
+                            <div class="day">23</div>
+                        </div>
+                        <!-- Week 5 -->
+                        <div class="week">
+                            <div class="day">24</div>
+                            <div class="day">25</div>
+                            <div class="day">26</div>
+                            <div class="day">27</div>
+                            <div class="day">28</div>
+                            <div class="day">29</div>
+                            <div class="day">30</div>
+                        </div>
+                        <!-- Week 6 -->
+                        <div class="week">
+                            <div class="day">31</div>
+                            <div class="day disabled">1</div>
+                            <div class="day disabled">2</div>
+                            <div class="day disabled">3</div>
+                            <div class="day disabled">4</div>
+                            <div class="day disabled">5</div>
+                            <div class="day disabled">6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="doubleview-calendar-38-5843.js"></script>
+</body>
+</html>
